@@ -58,7 +58,12 @@ Copyright &copy; 2026 The authors
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
 #extra_css = ["stylesheets/extra.css"]
-
+extra_css = [
+    "https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css", # Aplayer 样式表
+    "stylesheets/music_player.css", # 音乐播放器样式表
+    # ... 其他样式
+    "stylesheets/ask_ai.css", # ASK AI 样式表
+]
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
 #
@@ -66,7 +71,15 @@ Copyright &copy; 2026 The authors
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 #extra_javascript = ["javascripts/extra.js"]
-
+extra_javascript = [
+    "https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js", # Aplayer 脚本
+    "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js", # MetingJS 脚本
+    "javascripts/music_player.js", # 音乐播放器脚本
+    "https://cdn.jsdelivr.net/npm/marked/marked.min.js", # ASK AI Markdown 渲染
+    "javascripts/ask_ai.js", # ASK AI 脚本
+    "javascripts/extra.js", # 额外功能脚本
+    # ... 其他脚本
+]
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
@@ -190,7 +203,7 @@ features = [
     # user hovers over a link. This will reduce the perceived loading time
     # for the user.
     # https://zensical.org/docs/setup/navigation/#instant-prefetching
-    "navigation.instant.prefetch",
+    #"navigation.instant.prefetch",
 
     # In order to provide a better user experience on slow connections when
     # using instant navigation, a progress indicator can be enabled.
@@ -231,7 +244,7 @@ features = [
     # automatically updated with the active anchor as highlighted in the table
     # of contents.
     # https://zensical.org/docs/setup/navigation/#anchor-tracking
-    "navigation.tracking",
+    #"navigation.tracking",
 
     # When search highlighting is enabled and a user clicks on a search result,
     # Zensical will highlight all occurrences after following the link.
